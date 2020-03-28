@@ -8,7 +8,7 @@
     (print "Список:")
     (print LIST)
     (print "Введите искомый элемент") 
-    (set 'N '(read))
+    (set 'N (read))
     (print "Искомый элемент:") 
     (search N LIST)
    
