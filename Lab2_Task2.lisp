@@ -1,5 +1,16 @@
-(let ((in (open "e:/text_Task2.txt" :if-does-not-exist nil)))
-               (when in
-                 (loop for line = (read-line in nil)
-                      while line do (format t "~a~%" line))
-                 (close in)))
+(defun output_file (path)
+    (let ((in (open path :if-does-not-exist nil)))
+        (when in
+            (loop for line = (read-line in nil)
+            while line do (format t "~a~%" line))
+            (close in)
+         )
+     )
+)
+
+(defun input ()
+    (print "Введите путь к файлу в кавычках: ") 
+    (set 'N (read))
+    (output_file N)
+)
+(input)
